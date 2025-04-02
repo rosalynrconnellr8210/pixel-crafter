@@ -1,16 +1,15 @@
-name: [Snap Name] # you probably want to 'snapcraft register <name>'
+name: pixel-crafter # you probably want to 'snapcraft register <name>'
 base: core22 # the base snap is the execution environment for this snap
 version: '1.0.0' # just for humans, typically '1.2+git' or '1.3.2'
-title: [Game Name]
-summary: [Short Summary]
-description: [Description]
-
+title: Pixel Art Studio
+summary: Create pixel-perfect artwork with ease.
+description: Dive into pixel art creation with layers, palettes, and intuitive tools for artists and game designers. Export in multiple formats and share your masterpieces.
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-  [Snap Name]:
-    command: bin/[Snap Name]-bin
+  pixel-crafter:
+    command: bin/pixel-crafter-bin
     extensions: [gnome]
     plugs:
       - network
@@ -22,8 +21,8 @@ layout:
     bind: $SNAP/gnome-platform/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/webkit2gtk-4.0
 
 parts:
-  [Snap Name]:
+  pixel-crafter:
     plugin: dump
     source: .
     organize:
-      [Snap Name]-bin: bin/
+      pixel-crafter-bin: bin/
